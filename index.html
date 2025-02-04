@@ -7,359 +7,606 @@
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Inter', sans-serif;">
     <!-- Header Section -->
-    <div style="background-color: #D84949; position: relative; padding: clamp(20px, 4vw, 40px);">
-        <!-- Logo -->
-        <div style="position: absolute; top: clamp(15px, 3vw, 30px); left: clamp(15px, 3vw, 30px); background-color: white; padding: clamp(6px, 1.5vw, 12px); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-            <img src="hyperdrive-logo.png" alt="Hyper Drive" style="height: clamp(20px, 4vw, 32px);">
+    <div style="background: linear-gradient(135deg, #D84949 0%, #FF6B6B 100%); position: relative; padding: clamp(20px, 4vw, 40px); overflow: hidden;">
+        <!-- Animated Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: 
+            radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%),
+            linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%),
+            linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%);
+            background-size: 100% 100%, 60px 60px, 60px 60px;
+            background-position: 0 0, 0 0, 30px 30px;
+            animation: patternMove 20s linear infinite;"></div>
+
+        <!-- Floating Elements -->
+        <div style="position: absolute; top: 10%; right: 10%; width: 200px; height: 200px; background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(20px); animation: float 6s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: 20%; left: 5%; width: 150px; height: 150px; background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(15px); animation: float 8s ease-in-out infinite 1s;"></div>
+
+        <!-- Logo Container -->
+        <div style="position: absolute; top: clamp(15px, 3vw, 30px); left: clamp(15px, 3vw, 30px); z-index: 2;">
+            <div style="background: white; padding: clamp(6px, 1.5vw, 12px); border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform-origin: left center; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="hyperdrive-logo.png" alt="Hyper Drive" style="height: clamp(20px, 4vw, 32px);">
+            </div>
         </div>
 
         <!-- Main Content -->
-        <div style="text-align: center; padding: clamp(40px, 8vw, 80px) clamp(15px, 3vw, 30px);">
-            <p style="color: white; font-size: clamp(16px, 2.5vw, 20px); margin: 0 0 clamp(8px, 2vw, 15px) 0;">simply put...</p>
-            <h1 style="color: white; font-size: clamp(32px, 6vw, 56px); margin: 0 0 clamp(20px, 4vw, 40px) 0; font-weight: 700; line-height: 1.2;">
-                STUDENTS LIKE<br class="hide-on-mobile" style="display: inline-block; @media (max-width: 480px) { display: none; }">US BETTER
+        <div style="text-align: center; padding: clamp(60px, 10vw, 100px) clamp(15px, 3vw, 30px); position: relative; z-index: 1;">
+            <!-- Subtitle with Enhanced Animation -->
+            <div style="overflow: hidden;">
+                <p style="color: rgba(255,255,255,0.9); font-size: clamp(16px, 2.5vw, 20px); margin: 0 0 clamp(8px, 2vw, 15px) 0; transform: translateY(0); opacity: 1; transition: all 0.5s ease; font-weight: 500; letter-spacing: 1px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.opacity='0.8'" onmouseout="this.style.transform='translateY(0)'; this.style.opacity='1'">
+                    simply put...
+                </p>
+            </div>
+
+            <!-- Main Title with Gradient Text -->
+            <h1 style="color: white; font-size: clamp(32px, 6vw, 56px); margin: 0 0 clamp(20px, 4vw, 40px) 0; font-weight: 800; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+                <span style="display: block; background: linear-gradient(to right, #FFFFFF, rgba(255,255,255,0.8)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px;">STUDENTS LIKE</span>
+                <span style="display: block; background: linear-gradient(to right, rgba(255,255,255,0.8), #FFFFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">US BETTER</span>
             </h1>
-            <button style="background: transparent; border: 2px solid white; color: white; padding: clamp(10px, 2vw, 16px) clamp(20px, 4vw, 40px); border-radius: 25px; font-size: clamp(14px, 2vw, 18px); cursor: pointer; font-weight: 500; transition: all 0.3s ease;">
-                Register Now
+
+            <!-- Enhanced Register Button -->
+            <button style="background: transparent; border: 2px solid white; color: white; padding: clamp(12px, 2vw, 18px) clamp(25px, 4vw, 45px); border-radius: 50px; font-size: clamp(14px, 2vw, 18px); cursor: pointer; font-weight: 500; position: relative; overflow: hidden; transition: all 0.3s ease; transform-origin: center;" 
+                onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)'" 
+                onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                <span style="position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px;">
+                    Register Now
+                    <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </span>
             </button>
         </div>
     </div>
 
     <!-- Rating Bar -->
-    <div style="background-color: #1B2A4A; padding: clamp(10px, 2vw, 15px); text-align: center;">
-        <div style="display: flex; align-items: center; justify-content: center; gap: clamp(4px, 1vw, 8px); flex-wrap: wrap;">
-            <span style="color: #00BFB3; font-size: clamp(16px, 2.5vw, 18px);">★★★★★</span>
-            <span style="color: white; font-size: clamp(12px, 2vw, 14px);">Rated Five-Stars on Google. Trusted Globally.</span>
+    <div style="background: linear-gradient(135deg, #1B2A4A 0%, #2A3F6C 100%); padding: clamp(15px, 3vw, 25px); position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); pointer-events: none;"></div>
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: clamp(15px, 3vw, 25px); position: relative;">
+            <!-- Stars Container -->
+            <div style="display: flex; gap: 4px; animation: pulse 2s infinite;">
+                <span style="color: #00BFB3; font-size: clamp(18px, 2.5vw, 24px); text-shadow: 0 0 10px rgba(0,191,179,0.3);">★</span>
+                <span style="color: #00BFB3; font-size: clamp(18px, 2.5vw, 24px); text-shadow: 0 0 10px rgba(0,191,179,0.3);">★</span>
+                <span style="color: #00BFB3; font-size: clamp(18px, 2.5vw, 24px); text-shadow: 0 0 10px rgba(0,191,179,0.3);">★</span>
+                <span style="color: #00BFB3; font-size: clamp(18px, 2.5vw, 24px); text-shadow: 0 0 10px rgba(0,191,179,0.3);">★</span>
+                <span style="color: #00BFB3; font-size: clamp(18px, 2.5vw, 24px); text-shadow: 0 0 10px rgba(0,191,179,0.3);">★</span>
+            </div>
+            <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2);"></div>
+            <p style="color: white; font-size: clamp(14px, 2vw, 16px); margin: 0; font-weight: 500; letter-spacing: 0.5px;">
+                Rated Five-Stars on Google. <span style="color: #00BFB3;">Trusted Globally.</span>
+            </p>
         </div>
     </div>
 
     <!-- Features Grid -->
-    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 40px auto; gap: 20px; padding: 20px;">
-        <!-- Feature 1 -->
-        <div style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; margin: 0 auto 15px;">
-                <img src="images/fearure1.svg" alt="Reschedule" style="width: 100%; height: 100%; object-fit: contain;">
-            </div>
-            <p style="margin: 0; color: #1B2A4A; font-size: 14px; line-height: 1.4; font-weight: 500;">
-                Reschedule or<br>Cancel Anytime
-            </p>
-        </div>
+    <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: clamp(40px, 6vw, 80px) 20px; position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#E5F6F4 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
 
-        <!-- Feature 2 -->
-        <div style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; margin: 0 auto 15px;">
-                <img src="images/feature2.svg" alt="Satisfaction" style="width: 100%; height: 100%; object-fit: contain;">
-            </div>
-            <p style="margin: 0; color: #1B2A4A; font-size: 14px; line-height: 1.4; font-weight: 500;">
-                100% Satisfaction<br>Guarantee
-            </p>
-        </div>
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Features Container -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(20px, 4vw, 40px);">
+                <!-- Feature 1 -->
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 20px; padding: 25px; box-shadow: 0 10px 20px rgba(0,191,179,0.1);">
+                        <img src="images/feature1.svg" alt="Reschedule" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <p style="margin: 0; color: #1B2A4A; font-size: 16px; line-height: 1.5; font-weight: 600;">
+                        Reschedule or<br>Cancel Anytime
+                    </p>
+                </div>
 
-        <!-- Feature 3 -->
-        <div style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; margin: 0 auto 15px;">
-                <img src="images/feature3.svg" alt="24/7 Service" style="width: 100%; height: 100%; object-fit: contain;">
-            </div>
-            <p style="margin: 0; color: #1B2A4A; font-size: 14px; line-height: 1.4; font-weight: 500;">
-                24/7 Live<br>Customer Service
-            </p>
-        </div>
+                <!-- Feature 2 -->
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 20px; padding: 25px; box-shadow: 0 10px 20px rgba(0,191,179,0.1);">
+                        <img src="images/feature2.svg" alt="Satisfaction" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <p style="margin: 0; color: #1B2A4A; font-size: 16px; line-height: 1.5; font-weight: 600;">
+                        100% Satisfaction<br>Guarantee
+                    </p>
+                </div>
 
-        <!-- Feature 4 -->
-        <div style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; margin: 0 auto 15px;">
-                <img src="images/feature4.svg" alt="Payment Plan" style="width: 100%; height: 100%; object-fit: contain;">
-            </div>
-            <p style="margin: 0; color: #1B2A4A; font-size: 14px; line-height: 1.4; font-weight: 500;">
-                Monthly Payment Plan
-            </p>
-        </div>
+                <!-- Feature 3 -->
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 20px; padding: 25px; box-shadow: 0 10px 20px rgba(0,191,179,0.1);">
+                        <img src="images/feature3.svg" alt="24/7 Service" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <p style="margin: 0; color: #1B2A4A; font-size: 16px; line-height: 1.5; font-weight: 600;">
+                        24/7 Live<br>Customer Service
+                    </p>
+                </div>
 
-        <!-- Feature 5 -->
-        <div style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; margin: 0 auto 15px;">
-                <img src="images/feature5.svg" alt="Support" style="width: 100%; height: 100%; object-fit: contain;">
+                <!-- Feature 4 -->
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 20px; padding: 25px; box-shadow: 0 10px 20px rgba(0,191,179,0.1);">
+                        <img src="images/feature4.svg" alt="Payment Plan" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <p style="margin: 0; color: #1B2A4A; font-size: 16px; line-height: 1.5; font-weight: 600;">
+                        Monthly Payment<br>Plan
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 20px; padding: 25px; box-shadow: 0 10px 20px rgba(0,191,179,0.1);">
+                        <img src="images/feature5.svg" alt="Support" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <p style="margin: 0; color: #1B2A4A; font-size: 16px; line-height: 1.5; font-weight: 600;">
+                        100% Support Until<br>You Pass
+                    </p>
+                </div>
             </div>
-            <p style="margin: 0; color: #1B2A4A; font-size: 14px; line-height: 1.4; font-weight: 500;">
-                100% Support Until<br>You Pass
-            </p>
         </div>
     </div>
 
     <!-- Profile Section -->
-    <div style="max-width: 800px; margin: 40px auto; padding: 20px;">
-        <!-- Profile Header -->
-        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-            <div style="padding: 8px; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
-                <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="Lucy O'Keefe" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-            </div>      
-            <div>
-                <h2 style="margin: 0 0 8px 0; color: #333; font-size: clamp(20px, 3vw, 24px); font-weight: 600;">Lucy O'Keefe</h2>
-                <p style="margin: 0; color: #666; font-size: clamp(14px, 2vw, 16px);">Certified Scrum Trainer & Agile Coach</p>
+    <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: 60px 20px; position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#E5F6F4 1px, transparent 1px), radial-gradient(#E5F6F4 1px, transparent 1px); background-size: 20px 20px, 20px 20px; background-position: 0 0, 10px 10px; opacity: 0.2;"></div>
+
+        <div style="max-width: 800px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Profile Header -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div style="position: relative; display: inline-block; margin-bottom: 20px;">
+                    <!-- Profile Image Container -->
+                    <div style="width: 150px; height: 150px; border-radius: 20px; padding: 5px; background: white; box-shadow: 0 15px 35px rgba(0,0,0,0.1); position: relative; z-index: 1;">
+                        <div style="width: 100%; height: 100%; border-radius: 15px; overflow: hidden; position: relative;">
+                            <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="Lucy O'Keefe" style="width: 100%; height: 100%; object-fit: cover;">
+                            <!-- Gradient Overlay -->
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);"></div>
+                        </div>
+                    </div>
+                    <!-- Verification Badge -->
+                    <div style="position: absolute; bottom: -10px; right: -10px; background: linear-gradient(135deg, #00BFB3 0%, #00D6C9 100%); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,191,179,0.3);">
+                        <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: white;">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 style="color: #1B2A4A; font-size: 32px; margin: 0 0 10px 0; font-weight: 700;">Lucy O'Keefe</h2>
+                <p style="color: #666; font-size: 18px; margin: 0 0 5px 0;">Certified Scrum Trainer & Agile Coach</p>
+                <!-- Tags -->
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+                    <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 500;">Agile Expert</span>
+                    <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 500;">Scrum Trainer</span>
+                    <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 500;">Leadership Coach</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Bio Text -->
-        <div style="color: #666; font-size: clamp(14px, 2vw, 14px); line-height: 1.6;">
-            <p style="margin: 0 0 20px 0;">
-                Luciana (Lucy) O'Keefe is a passionate and effective mentor in the Agile industry. She is a leader in 
-                <a href="#" style="color: #0066CC; text-decoration: none;">transformation and coaching</a> both for 
-                teams and executives as well as a speaker at Agile events across the country. As a 
-                <a href="#" style="color: #0066CC; text-decoration: none;">Scrum Trainer</a>, she is committed to 
-                mentorship and ensuring her student's Scrum training is applicable beyond the classroom.
-            </p>
+            <!-- Bio Content -->
+            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05);">
+                <!-- Introduction -->
+                <p style="color: #1B2A4A; font-size: 16px; line-height: 1.8; margin: 0 0 25px 0;">
+                    Luciana (Lucy) O'Keefe is a passionate and effective mentor in the Agile industry. She is a leader in 
+                    <a href="#" style="color: #00BFB3; text-decoration: none; font-weight: 500; border-bottom: 2px solid #E5F6F4; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='#00BFB3'" onmouseout="this.style.borderColor='#E5F6F4'">transformation and coaching</a> both for 
+                    teams and executives as well as a speaker at Agile events across the country.
+                </p>
 
-            <p style="margin: 0 0 20px 0; font-style: italic;">
-                "I love self-development. Inspecting and adapting is something that I've always thought about. 
-                You have to think about where you are and what you've done in order to become better 
-                tomorrow. It's about continuous improvement and identifying the adaptations needed to move 
-                forward."
-            </p>
+                <!-- Quote -->
+                <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: 30px; border-radius: 15px; margin: 0 0 25px 0; position: relative;">
+                    <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: #00BFB3; opacity: 0.2; position: absolute; top: 20px; left: 20px;">
+                        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                    </svg>
+                    <p style="color: #1B2A4A; font-size: 16px; line-height: 1.8; font-style: italic; margin: 0; padding-left: 40px;">
+                        "I love self-development. Inspecting and adapting is something that I've always thought about. 
+                        You have to think about where you are and what you've done in order to become better 
+                        tomorrow. It's about continuous improvement and identifying the adaptations needed to move 
+                        forward."
+                    </p>
+                </div>
 
-            <p style="margin: 0 0 20px 0;">
-                Lucy started her career as a Computer Programmer and Business Analyst and has held every position on a Scrum team – ensuring that she 
-                knows both the details of the work and the pain points each team member faces.
-            </p>
+                <!-- Experience -->
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #1B2A4A; font-size: 20px; margin: 0 0 15px 0;">Experience & Expertise</h3>
+                    <p style="color: #666; font-size: 16px; line-height: 1.8; margin: 0;">
+                        Lucy started her career as a Computer Programmer and Business Analyst and has held every position on a Scrum team – ensuring that she 
+                        knows both the details of the work and the pain points each team member faces.
+                    </p>
+                </div>
 
-            <p style="margin: 0 0 20px 0;">
-                "I believe that the Scrum Master is the glue that holds a Scrum Team together. A strong 
-                partnership between the SM and the Product Owner is the foundation for all successful products. 
-                As a coach and trainer, my role is to support this relationship, foster their growth mindsets, and 
-                emphasize the importance of continuous improvement."
-            </p>
+                <!-- Additional Content -->
+                <div style="color: #666; font-size: 16px; line-height: 1.8;">
+                    <p style="margin: 0 0 20px 0;">
+                        "I believe that the Scrum Master is the glue that holds a Scrum Team together. A strong 
+                        partnership between the SM and the Product Owner is the foundation for all successful products. 
+                        As a coach and trainer, my role is to support this relationship, foster their growth mindsets, and 
+                        emphasize the importance of continuous improvement."
+                    </p>
 
-            <p style="margin: 0 0 20px 0;">
-                Lucy started out doing PSM1 training at Scrum.org in 2013. From there, she quickly progressed to an Agile coach, 
-                allowing her to hone her talents for problem-solving and team-building. In addition, she helped the Para's Agile Center of 
-                Transformation efforts as the Vice President, Agile Coach and ScrumMaster Execution Lead.
-            </p>
+                    <p style="margin: 0 0 20px 0;">
+                        Lucy started out doing PSM1 training at Scrum.org in 2013. From there, she quickly progressed to an Agile coach, 
+                        allowing her to hone her talents for problem-solving and team-building. In addition, she helped the Para's Agile Center of 
+                        Transformation efforts as the Vice President, Agile Coach and ScrumMaster Execution Lead.
+                    </p>
 
-            <p style="margin: 0 0 20px 0;">
-                Now, Lucy uses her three decades of experience to help companies embrace Agile at the organizational and individual levels. Her passion and 
-                purpose is to help others build more fulfilling and successful careers through Agile, as she was able to do.
-            </p>
+                    <p style="margin: 0 0 20px 0;">
+                        Now, Lucy uses her three decades of experience to help companies embrace Agile at the organizational and individual levels. Her passion and 
+                        purpose is to help others build more fulfilling and successful careers through Agile, as she was able to do.
+                    </p>
 
-            <p style="margin: 0 0 20px 0;">
-                "I used to be in the "waterfall world" where it's hierarchical leadership, and the people at the top 
-                make all the decisions. We never did what we said we were going to do. We never achieved the 
-                objectives that we wanted. But I knew there had to be a way to make change. That's when I 
-                learned about Scrum and Agile business. Once I found it and brought it into the organization, we 
-                could see the transformation happening. I became the Agile expert and truly found my calling to 
-                help others create the change they want to see."
-            </p>
+                    <p style="margin: 0 0 20px 0;">
+                        "I used to be in the "waterfall world" where it's hierarchical leadership, and the people at the top 
+                        make all the decisions. We never did what we said we were going to do. We never achieved the 
+                        objectives that we wanted. But I knew there had to be a way to make change. That's when I 
+                        learned about Scrum and Agile business. Once I found it and brought it into the organization, we 
+                        could see the transformation happening. I became the Agile expert and truly found my calling to 
+                        help others create the change they want to see."
+                    </p>
 
-            <p style="margin: 0;">
-                Lucy has traveled the world, living in Brazil and Italy before making her home in Clearwater, Florida. As a polyglot fluent in English, 
-                Portuguese, Italian, and Spanish, she's among the distinguished 1% of the world's population proficient in 4+ languages. Lucy's unparalleled 
-                communication and collaboration abilities create an enriched learning experience for her students. She will help you become a force for 
-                positive transformation, too, when you enroll in her empowering course.
-            </p>
+                    <p style="margin: 0;">
+                        Lucy has traveled the world, living in Brazil and Italy before making her home in Clearwater, Florida. As a polyglot fluent in English, 
+                        Portuguese, Italian, and Spanish, she's among the distinguished 1% of the world's population proficient in 4+ languages. Lucy's unparalleled 
+                        communication and collaboration abilities create an enriched learning experience for her students. She will help you become a force for 
+                        positive transformation, too, when you enroll in her empowering course.
+                    </p>
+                </div>
+
+                <!-- Languages & Global Experience -->
+                <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: 20px; border-radius: 15px; margin-top: 25px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: #00BFB3;">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                        <div>
+                            <h4 style="color: #1B2A4A; font-size: 16px; margin: 0 0 5px 0;">Multilingual Expert</h4>
+                            <p style="color: #666; font-size: 14px; margin: 0;">Fluent in English, Portuguese, Italian, and Spanish</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- HD Deals Section -->
-    <div style="max-width: 1200px; margin: 40px auto; padding: 20px;">
-        <h2 style="text-align: center; color: #333; font-size: 24px; margin-bottom: 40px;">Your HD Deals</h2>
-        
-        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-            <!-- Better Alumni Benefits -->
-            <div style="flex: 1; min-width: 300px; max-width: 400px; padding: 25px; border: 1px solid #E5E5E5; border-radius: 8px;">
-                <h3 style="color: #00BFB3; font-size: 20px; margin: 0 0 10px 0;">Better Alumni Benefits</h3>
-                <p style="color: #333; margin: 0 0 20px 0; font-size: 14px;">Free with your purchase of any Hyperdrive course</p>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• LIVE Strategy Sessions</li>
-                    <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Premium Access to Comparative Agility</li>
-                    <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Job Search Tools</li>
-                    <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Practice Tests</li>
-                    <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Exam Tutoring</li>
-                    <li style="color: #333; font-size: 14px;">• Learn & Network</li>
-                </ul>
+    <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: 60px 20px; position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#E5F6F4 1px, transparent 1px); background-size: 20px 20px; opacity: 0.3;"></div>
+
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 style="color: #1B2A4A; font-size: 32px; margin: 0 0 15px 0; font-weight: 700;">Your HD Deals</h2>
+                <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto;">Unlock exclusive benefits and savings designed to accelerate your Agile journey</p>
             </div>
-
-            <!-- 20% Off Enrollment -->
-            <div style="flex: 1; min-width: 300px; max-width: 400px; padding: 25px; border: 1px solid #E5E5E5; border-radius: 8px; display: flex; flex-direction: column;">
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                    <div style="width: 40px; height: 40px;">
-                        <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
-                            <circle cx="12" cy="12" r="11" fill="none" stroke="#1B2A4A" stroke-width="2"/>
-                            <path d="M7 12l3 3 7-7" stroke="#1B2A4A" stroke-width="2" fill="none"/>
-                        </svg>
+            
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <!-- Better Alumni Benefits Card -->
+                <div style="flex: 1; min-width: 300px; max-width: 400px; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); position: relative; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <!-- Card Header -->
+                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                            <svg viewBox="0 0 24 24" style="width: 30px; height: 30px; fill: #00BFB3;">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-5.83l6.59-6.59L18 9l-8 8-4-4 1.41-1.41L9 13.17z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="color: #00BFB3; font-size: 24px; margin: 0 0 5px 0;">Better Alumni Benefits</h3>
+                            <p style="color: #666; margin: 0; font-size: 14px;">Free with your purchase of any Hyperdrive course</p>
+                        </div>
                     </div>
-                    <h3 style="color: #00BFB3; font-size: 20px; margin: 0;">20% Off Your First Enrollment!</h3>
+
+                    <!-- Benefits List -->
+                    <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #1B2A4A; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <span style="color: #00BFB3; font-size: 18px;">•</span> LIVE Strategy Sessions
+                            </li>
+                            <li style="color: #1B2A4A; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <span style="color: #00BFB3; font-size: 18px;">•</span> Premium Access to Comparative Agility
+                            </li>
+                            <li style="color: #1B2A4A; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <span style="color: #00BFB3; font-size: 18px;">•</span> Job Search Tools
+                            </li>
+                            <li style="color: #1B2A4A; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <span style="color: #00BFB3; font-size: 18px;">•</span> Practice Tests
+                            </li>
+                            <li style="color: #1B2A4A; font-size: 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                                <span style="color: #00BFB3; font-size: 18px;">•</span> Exam Tutoring
+                            </li>
+                            <li style="color: #1B2A4A; font-size: 14px; display: flex; align-items: center; gap: 10px;">
+                                <span style="color: #00BFB3; font-size: 18px;">•</span> Learn & Network
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <p style="color: #333; font-size: 14px; margin: 0 0 10px 0;">How to redeem:</p>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Click register on the class of your choice.</li>
-                        <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Register online and enter promo code <strong>NEW2024</strong> at checkout.</li>
-                        <li style="color: #333; font-size: 14px; margin-bottom: 8px;">• Enjoy your class with a special discount!</li>
-                    </ul>
-                </div>
+                <!-- 20% Off Enrollment Card -->
+                <div style="flex: 1; min-width: 300px; max-width: 400px; background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); position: relative; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.05)'">
+                    <!-- Big Deal Badge -->
+                    <div style="position: absolute; top: -15px; right: 30px; background: linear-gradient(135deg, #00BFB3 0%, #00D6C9 100%); color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,191,179,0.2);">
+                        BIG DEAL
+                    </div>
 
-                <div style="margin-top: auto;">
-                    <p style="color: #666; font-size: 12px; margin: 0 0 5px 0;">This offer is exclusively for new customers.</p>
-                    <p style="color: #666; font-size: 12px; margin: 0;">A minimum order amount of $400 is required to qualify for the discount.</p>
-                </div>
+                    <!-- Card Header -->
+                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 24px; color: #00BFB3; font-weight: 700;">20%</span>
+                        </div>
+                        <h3 style="color: #00BFB3; font-size: 24px; margin: 0;">Off Your First Enrollment!</h3>
+                    </div>
 
-                <!-- Big Deal Badge -->
-                <div style="position: absolute; top: 20px; right: 20px; background-color: #00BFB3; color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; font-weight: 500;">
-                    BIG DEAL
+                    <!-- How to Redeem -->
+                    <div style="background: linear-gradient(135deg, #F8F9FC 0%, #FFFFFF 100%); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                        <p style="color: #1B2A4A; font-size: 16px; font-weight: 600; margin: 0 0 15px 0;">How to redeem:</p>
+                        <ol style="list-style: none; padding: 0; margin: 0; counter-reset: item;">
+                            <li style="color: #666; font-size: 14px; margin-bottom: 15px; display: flex; gap: 15px;">
+                                <span style="color: #00BFB3; font-weight: 600; min-width: 24px;">1.</span>
+                                Click register on the class of your choice
+                            </li>
+                            <li style="color: #666; font-size: 14px; margin-bottom: 15px; display: flex; gap: 15px;">
+                                <span style="color: #00BFB3; font-weight: 600; min-width: 24px;">2.</span>
+                                Register online and enter promo code <span style="background: #E5F6F4; color: #00BFB3; padding: 2px 8px; border-radius: 4px; font-weight: 600;">NEW2024</span>
+                            </li>
+                            <li style="color: #666; font-size: 14px; display: flex; gap: 15px;">
+                                <span style="color: #00BFB3; font-weight: 600; min-width: 24px;">3.</span>
+                                Enjoy your class with a special discount!
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Terms -->
+                    <div style="background: #FAFAFA; padding: 15px; border-radius: 10px;">
+                        <p style="color: #666; font-size: 12px; margin: 0 0 8px 0;">• This offer is exclusively for new customers.</p>
+                        <p style="color: #666; font-size: 12px; margin: 0;">• A minimum order amount of $400 is required to qualify for the discount.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Upcoming Courses Section -->
-    <div style="max-width: 800px; margin: 40px auto; padding: 20px;">
-        <h2 style="text-align: center; color: #333; font-size: 24px; margin-bottom: 30px;">Upcoming from Hyperdrive</h2>
+    <div style="max-width: 1200px; margin: 60px auto; padding: 20px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="color: #1B2A4A; font-size: 32px; margin: 0 0 15px 0; font-weight: 700;">Upcoming from Hyperdrive</h2>
+            <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto;">Join our industry-leading certification courses and transform your career with expert guidance.</p>
+        </div>
 
-        <!-- Course Item 1 -->
-        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px; padding: 15px; border: 1px solid #E5E5E5; border-radius: 8px;">
-            <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <div style="flex-grow: 1;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
-                    <div>
-                        <div style="margin-bottom: 5px;">
-                            <span style="color: #00BFB3; font-weight: 500;">FEB 10</span>
-                            <span style="color: #333;"> - Certified ScrumMaster® (CSM®)</span>
+        <!-- Course Cards Container -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <!-- Course Card 1 -->
+            <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <!-- Card Header -->
+                <div style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); padding: 20px; position: relative;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="position: relative;">
+                            <div style="width: 70px; height: 70px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="position: absolute; bottom: -5px; right: -5px; background: #00BFB3; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 12px;">✓</span>
+                            </div>
                         </div>
-                        <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Mon, 10 Feb 2025 - Wed, 12 Feb 2025 | 21:00 - 05:00 (GMT+5)</div>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">HD ScrumMaster</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Livestream</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Course</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Agile</span>
+                        <div>
+                            <div style="color: #00BFB3; font-weight: 600; font-size: 18px;">FEB 10</div>
+                            <div style="color: #1B2A4A; font-weight: 500;">Certified ScrumMaster® (CSM®)</div>
                         </div>
                     </div>
-                    <div style="text-align: right;">
-                        <div style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 5px;">$495</div>
-                        <button style="background-color: #1B2A4A; color: white; border: none; padding: 8px 16px; border-radius: 4px; font-size: 14px; cursor: pointer;">ADD TO CART →</button>
+                </div>
+
+                <!-- Card Content -->
+                <div style="padding: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #666;">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                            <span style="color: #666; font-size: 14px;">Mon, 10 Feb - Wed, 12 Feb 2025</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #666;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span style="color: #666; font-size: 14px;">21:00 - 05:00 (GMT+5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">HD ScrumMaster</span>
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">Livestream</span>
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">Course</span>
+                    </div>
+
+                    <!-- Price and CTA -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="font-size: 24px; font-weight: 700; color: #1B2A4A;">$495</div>
+                        <button style="background: linear-gradient(135deg, #1B2A4A 0%, #2A3F6C 100%); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-size: 14px; font-weight: 500; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            ADD TO CART →
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Course Item 2 -->
-        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px; padding: 15px; border: 1px solid #E5E5E5; border-radius: 8px;">
-            <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <div style="flex-grow: 1;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
-                    <div>
-                        <div style="margin-bottom: 5px;">
-                            <span style="color: #00BFB3; font-weight: 500;">FEB 10</span>
-                            <span style="color: #333;"> - Certified ScrumMaster® (CSM®) 1/2 Day Schedule</span>
+            <!-- Course Card 1 -->
+            <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <!-- Card Header -->
+                <div style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); padding: 20px; position: relative;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="position: relative;">
+                            <div style="width: 70px; height: 70px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="position: absolute; bottom: -5px; right: -5px; background: #00BFB3; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 12px;">✓</span>
+                            </div>
                         </div>
-                        <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Mon, 10 Feb 2025 - Thu, 13 Feb 2025 | 22:00 - 03:00 (GMT+5)</div>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">HD ScrumMaster</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Livestream</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Course</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Agile</span>
+                        <div>
+                            <div style="color: #00BFB3; font-weight: 600; font-size: 18px;">FEB 10</div>
+                            <div style="color: #1B2A4A; font-weight: 500;">Certified ScrumMaster® (CSM®)</div>
                         </div>
                     </div>
-                    <div style="text-align: right;">
-                        <div style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 5px;">$400</div>
-                        <button style="background-color: #1B2A4A; color: white; border: none; padding: 8px 16px; border-radius: 4px; font-size: 14px; cursor: pointer;">ADD TO CART →</button>
+                </div>
+
+                <!-- Card Content -->
+                <div style="padding: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #666;">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                            <span style="color: #666; font-size: 14px;">Mon, 10 Feb - Wed, 12 Feb 2025</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #666;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span style="color: #666; font-size: 14px;">21:00 - 05:00 (GMT+5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">HD ScrumMaster</span>
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">Livestream</span>
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">Course</span>
+                    </div>
+
+                    <!-- Price and CTA -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="font-size: 24px; font-weight: 700; color: #1B2A4A;">$495</div>
+                        <button style="background: linear-gradient(135deg, #1B2A4A 0%, #2A3F6C 100%); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-size: 14px; font-weight: 500; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            ADD TO CART →
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Course Item 3 -->
-        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px; padding: 15px; border: 1px solid #E5E5E5; border-radius: 8px;">
-            <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <div style="flex-grow: 1;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
-                    <div>
-                        <div style="margin-bottom: 5px;">
-                            <span style="color: #00BFB3; font-weight: 500;">FEB 12</span>
-                            <span style="color: #333;"> - Certified ScrumMaster® (CSM®)</span>
+            <!-- Course Card 1 -->
+            <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'">
+                <!-- Card Header -->
+                <div style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); padding: 20px; position: relative;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="position: relative;">
+                            <div style="width: 70px; height: 70px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                <img src="https://res.cloudinary.com/dlefx0ffk/image/upload/ar_1,c_fill/f_auto/q_auto:best/c_limit,w_2560/07795f2e-2f7c-49f3-a652-e5fb5a9c46a8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div style="position: absolute; bottom: -5px; right: -5px; background: #00BFB3; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 12px;">✓</span>
+                            </div>
                         </div>
-                        <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Wed, 12 Feb 2025 - Fri, 14 Feb 2025 | 18:30 - 02:30 (GMT+5)</div>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">HD ScrumMaster</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Livestream</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Course</span>
-                            <span style="background-color: #E5F6F4; color: #00BFB3; padding: 4px 12px; border-radius: 12px; font-size: 12px;">Agile</span>
+                        <div>
+                            <div style="color: #00BFB3; font-weight: 600; font-size: 18px;">FEB 10</div>
+                            <div style="color: #1B2A4A; font-weight: 500;">Certified ScrumMaster® (CSM®)</div>
                         </div>
                     </div>
-                    <div style="text-align: right;">
-                        <div style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 5px;">$395</div>
-                        <button style="background-color: #1B2A4A; color: white; border: none; padding: 8px 16px; border-radius: 4px; font-size: 14px; cursor: pointer;">ADD TO CART →</button>
+                </div>
+
+                <!-- Card Content -->
+                <div style="padding: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #666;">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                            <span style="color: #666; font-size: 14px;">Mon, 10 Feb - Wed, 12 Feb 2025</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #666;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span style="color: #666; font-size: 14px;">21:00 - 05:00 (GMT+5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">HD ScrumMaster</span>
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">Livestream</span>
+                        <span style="background: linear-gradient(135deg, #E5F6F4 0%, #F5FFFD 100%); color: #00BFB3; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 500;">Course</span>
+                    </div>
+
+                    <!-- Price and CTA -->
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="font-size: 24px; font-weight: 700; color: #1B2A4A;">$495</div>
+                        <button style="background: linear-gradient(135deg, #1B2A4A 0%, #2A3F6C 100%); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-size: 14px; font-weight: 500; cursor: pointer; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            ADD TO CART →
+                        </button>
                     </div>
                 </div>
             </div>
+
         </div>
 
-        <!-- View Full Schedule Link -->
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="#" style="color: #00BFB3; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center;">
-                VIEW FULL SCHEDULE →
+
+        <!-- View Schedule Link -->
+        <div style="text-align: center;">
+            <a href="#" style="display: inline-flex; align-items: center; gap: 8px; color: #00BFB3; text-decoration: none; font-weight: 500; padding: 12px 24px; border: 2px solid #00BFB3; border-radius: 25px; transition: all 0.3s ease;" onmouseover="this.style.background='#00BFB3'; this.style.color='white'" onmouseout="this.style.background='transparent'; this.style.color='#00BFB3'">
+                VIEW FULL SCHEDULE
+                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                </svg>
             </a>
         </div>
     </div>
 
     <!-- Why Hyperdrive Section -->
-    <div style="background-color: #D84949; padding: 40px 20px;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <!-- Video Container -->
-            <div style="position: relative; width: 100%; padding-bottom: 56.25%; margin-bottom: 30px; background-color: #000; border-radius: 8px; overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #D84949 0%, #FF6B6B 100%); padding: 60px 20px; position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); pointer-events: none;"></div>
+
+        <div style="max-width: 800px; margin: 0 auto; position: relative;">
+            <!-- Video Container with Enhanced Design -->
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%; margin-bottom: 40px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
                 <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                    src="https://www.youtube.com/embed/upBKD20aZRE?si=QtCenQollyRRCI7L"" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                    src="https://www.youtube.com/embed/upBKD20aZRE?si=QtCenQollyRRCI7L" 
                     title="Meet Hyperdrive"
-                    frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
                 </iframe>
+                <!-- Video Overlay -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%); pointer-events: none;"></div>
             </div>
 
-            <!-- Content -->
-            <h2 style="color: white; text-align: left; font-size: 20px; margin: 0 0 20px 0;">Why Hyperdrive?</h2>
-            <p style="color: white; text-align: left; margin: 0 0 40px 0; line-height: 1.6; font-size: 14px;">
-                We offer a unique, holistic approach to advancing and optimizing Business Agility. Our best-in-class 
-                agile consulting, training, and staffing solutions make the process simple and sustainable. Partner 
-                with us, our exclusive network of world-leading coaches, change agents, and Agile thought leaders 
-                to cut through organizational complexity. We'll help you exceed your goals and achieve stellar growth.
-            </p>
+            <!-- Content with Enhanced Typography -->
+            <div style="position: relative; z-index: 1;">
+                <h2 style="color: white; font-size: 32px; margin: 0 0 20px 0; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Why Hyperdrive?</h2>
+                <p style="color: white; text-align: left; margin: 0 0 40px 0; line-height: 1.8; font-size: 16px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                    We offer a unique, holistic approach to advancing and optimizing Business Agility. Our best-in-class 
+                    agile consulting, training, and staffing solutions make the process simple and sustainable. Partner 
+                    with us, our exclusive network of world-leading coaches, change agents, and Agile thought leaders 
+                    to cut through organizational complexity. We'll help you exceed your goals and achieve stellar growth.
+                </p>
+            </div>
 
-            <!-- Features Grid -->
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-top: 40px;">
+            <!-- Enhanced Features Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px;">
                 <!-- Feature 1 -->
-                <div style="flex: 1; min-width: 250px; text-align: center;">
-                    <div style="width: 60px; height: 60px; margin: 0 auto 15px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: rgba(255,255,255,0.2); border-radius: 50%; padding: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                         <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; fill: white;">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.88-11.71L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z"/>
                         </svg>
                     </div>
-                    <h3 style="color: white; font-size: 18px; margin: 0 0 10px 0;">Our consulting clients achieve these valuable outcomes like:</h3>
+                    <h3 style="color: white; font-size: 20px; margin: 0 0 15px 0; font-weight: 600;">Client Success Stories</h3>
                     <ul style="list-style: none; padding: 0; margin: 0; color: white;">
-                        <li style="margin-bottom: 8px;">• $18+ Revenue Growth</li>
-                        <li style="margin-bottom: 8px;">• $18+ Increased Valuation</li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #FFD700;">✦</span> $18+ Revenue Growth
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: #FFD700;">✦</span> $18+ Increased Valuation
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Feature 2 -->
-                <div style="flex: 1; min-width: 250px; text-align: center;">
-                    <div style="width: 60px; height: 60px; margin: 0 auto 15px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: rgba(255,255,255,0.2); border-radius: 50%; padding: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                         <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; fill: white;">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3 style="color: white; font-size: 18px; margin: 0 0 10px 0;">We offer award-winning, 5-star rated Agile training.</h3>
-                    <p style="color: white; margin: 0;">We have an extensive roster of the best Agile instructors in the world.</p>
+                    <h3 style="color: white; font-size: 20px; margin: 0 0 15px 0; font-weight: 600;">Award-Winning Training</h3>
+                    <p style="color: white; margin: 0; line-height: 1.6;">Our 5-star rated program features the world's best Agile instructors.</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div style="flex: 1; min-width: 250px; text-align: center;">
-                    <div style="width: 60px; height: 60px; margin: 0 auto 15px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 70px; height: 70px; margin: 0 auto 20px; background: rgba(255,255,255,0.2); border-radius: 50%; padding: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                         <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; fill: white;">
-                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                         </svg>
                     </div>
-                    <h3 style="color: white; font-size: 18px; margin: 0 0 10px 0;">We're not your typical staffing agency.</h3>
-                    <p style="color: white; margin: 0;">Our expert recruiters are certified Agilists and HR pros with years of hands-on Agile experience.</p>
+                    <h3 style="color: white; font-size: 20px; margin: 0 0 15px 0; font-weight: 600;">Expert Staffing</h3>
+                    <p style="color: white; margin: 0; line-height: 1.6;">Certified Agilists and HR pros with years of hands-on experience.</p>
                 </div>
             </div>
         </div>
