@@ -8,18 +8,14 @@
 <body style="margin: 0; padding: 0; font-family: 'Inter', sans-serif;">
     <!-- Header Section -->
     <div style="background: linear-gradient(135deg, #D84949 0%, #FF6B6B 100%); position: relative; padding: clamp(20px, 4vw, 40px); overflow: hidden;">
-        <!-- Animated Background Pattern -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: 
-            radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%),
-            linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%),
-            linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%);
-            background-size: 100% 100%, 60px 60px, 60px 60px;
-            background-position: 0 0, 0 0, 30px 30px;
-            animation: patternMove 20s linear infinite;"></div>
-
-        <!-- Floating Elements -->
-        <div style="position: absolute; top: 10%; right: 10%; width: 200px; height: 200px; background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(20px); animation: float 6s ease-in-out infinite;"></div>
-        <div style="position: absolute; bottom: 20%; left: 5%; width: 150px; height: 150px; background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(15px); animation: float 8s ease-in-out infinite 1s;"></div>
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: 
+            linear-gradient(45deg, #fff 25%, transparent 25%),
+            linear-gradient(-45deg, #fff 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #fff 75%),
+            linear-gradient(-45deg, transparent 75%, #fff 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;"></div>
 
         <!-- Logo Container -->
         <div style="position: absolute; top: clamp(15px, 3vw, 30px); left: clamp(15px, 3vw, 30px); z-index: 2;">
@@ -30,23 +26,23 @@
 
         <!-- Main Content -->
         <div style="text-align: center; padding: clamp(60px, 10vw, 100px) clamp(15px, 3vw, 30px); position: relative; z-index: 1;">
-            <!-- Subtitle with Enhanced Animation -->
+            <!-- Subtitle -->
             <div style="overflow: hidden;">
                 <p style="color: rgba(255,255,255,0.9); font-size: clamp(16px, 2.5vw, 20px); margin: 0 0 clamp(8px, 2vw, 15px) 0; transform: translateY(0); opacity: 1; transition: all 0.5s ease; font-weight: 500; letter-spacing: 1px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.opacity='0.8'" onmouseout="this.style.transform='translateY(0)'; this.style.opacity='1'">
                     simply put...
                 </p>
             </div>
 
-            <!-- Main Title with Gradient Text -->
+            <!-- Main Title -->
             <h1 style="color: white; font-size: clamp(32px, 6vw, 56px); margin: 0 0 clamp(20px, 4vw, 40px) 0; font-weight: 800; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
-                <span style="display: block; background: linear-gradient(to right, #FFFFFF, rgba(255,255,255,0.8)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px;">STUDENTS LIKE</span>
-                <span style="display: block; background: linear-gradient(to right, rgba(255,255,255,0.8), #FFFFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">US BETTER</span>
+                <span style="display: block; margin-bottom: 5px;">STUDENTS LIKE</span>
+                <span style="display: block;">US BETTER</span>
             </h1>
 
-            <!-- Enhanced Register Button -->
+            <!-- Register Button -->
             <button style="background: transparent; border: 2px solid white; color: white; padding: clamp(12px, 2vw, 18px) clamp(25px, 4vw, 45px); border-radius: 50px; font-size: clamp(14px, 2vw, 18px); cursor: pointer; font-weight: 500; position: relative; overflow: hidden; transition: all 0.3s ease; transform-origin: center;" 
-                onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)'" 
-                onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='scale(1.05)'" 
+                onmouseout="this.style.background='transparent'; this.style.transform='scale(1)'">
                 <span style="position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 8px;">
                     Register Now
                     <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;">
